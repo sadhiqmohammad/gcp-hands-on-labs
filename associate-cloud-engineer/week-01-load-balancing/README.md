@@ -6,13 +6,13 @@ Skill badge course 648, "Implementing Cloud Load Balancing for Compute Engine". 
 
 ## Modules
 
-| # | Lab | What you build |
-|---|---|---|
-| 1 | [Create a Virtual Machine](01-create-a-virtual-machine/) | A VM from the console and from gcloud, with NGINX |
-| 2 | [Getting Started with Cloud Shell and gcloud](02-cloud-shell-and-gcloud/) | gcloud config, filtering, SSH, firewall basics |
-| 3 | [Set Up a Network Load Balancer](03-network-load-balancer/) | 3 Apache VMs behind a regional layer 4 LB |
-| 4 | [Set Up an Application Load Balancer](04-application-load-balancer/) | MIG + global layer 7 HTTP LB |
-| 5 | [Challenge Lab](05-challenge-lab/) | To be added |
+| # | Lab | Lab ID | What you build |
+|---|---|---|---|
+| 1 | [Create a Virtual Machine](01-create-a-virtual-machine/) | TBD | A VM from the console and from gcloud, with NGINX |
+| 2 | [Getting Started with Cloud Shell and gcloud](02-cloud-shell-and-gcloud/) | TBD | gcloud config, filtering, SSH, firewall basics |
+| 3 | [Set Up a Network Load Balancer](03-network-load-balancer/) | TBD | 3 Apache VMs behind a regional layer 4 LB |
+| 4 | [Set Up an Application Load Balancer](04-application-load-balancer/) | [GSP155](https://www.skills.google/course_templates/648/labs/613023) | MIG + global layer 7 HTTP LB |
+| 5 | [Challenge Lab](05-challenge-lab/) | TBD | To be added |
 
 ## Variables used in every module
 

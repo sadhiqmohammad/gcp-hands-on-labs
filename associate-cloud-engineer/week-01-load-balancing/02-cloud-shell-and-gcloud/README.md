@@ -2,6 +2,10 @@
 
 Practice gcloud configuration, listing and filtering resources, SSH, and firewall rules.
 
+| Lab ID | Direct link |
+|---|---|
+| TBD | TBD |
+
 > **ACE exam note:** `gcloud config` and configurations, `--filter` and `--format`, and the difference between `gcloud compute ssh` and IAP are all fair game.
 
 ## Task 1. Configure your environment

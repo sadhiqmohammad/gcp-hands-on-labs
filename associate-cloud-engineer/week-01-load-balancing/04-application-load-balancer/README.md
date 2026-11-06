@@ -2,6 +2,10 @@
 
 A managed instance group from a template, behind a global external Application (HTTP) Load Balancer.
 
+| Lab ID | Direct link |
+|---|---|
+| GSP155 | [Open in Google Skills](https://www.skills.google/course_templates/648/labs/613023) |
+
 > **ACE exam note:** know the chain: forwarding rule > target HTTP proxy > URL map > backend service > instance group, plus health check and the health-checker firewall ranges.
 
 ## Task 1. Instance template
