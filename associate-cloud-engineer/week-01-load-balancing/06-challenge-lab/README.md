@@ -12,7 +12,10 @@ This lab combines [Lab 3](../03-network-load-balancer/) and [Lab 4](../04-applic
 
 ## Set variables
 
+`set +H` turns off Bash history expansion. Without it, the `#!/bin/bash` line in the startup scripts fails with `event not found`.
+
 ```bash
+set +H
 export REGION=us-east1      # from your lab
 export ZONE=us-east1-b      # from your lab
 gcloud config set compute/region $REGION
@@ -188,6 +191,7 @@ curl http://$LB_IP      # "Page served from: lb-backend-group-xxxx"
 | Symptom | Fix |
 |---|---|
 | Check my progress fails but the resources exist | A name doesn't match the lab text. Delete the resource and recreate it with the exact name. |
+| `-bash: !/bin/bash: event not found` and a `>` prompt | Press Ctrl+C, run `set +H`, then run the command again. |
 | `target-pools create` rejects the health check | Use `http-health-checks` (legacy), not `health-checks`. |
 | Network LB returns nothing | Startup scripts still running, or `www-firewall-network-lb` missing or not targeting `network-lb-tag`. |
 | HTTP LB backends `UNHEALTHY` | `fw-allow-health-check` missing, wrong tag on the template, or startup script still running. |
