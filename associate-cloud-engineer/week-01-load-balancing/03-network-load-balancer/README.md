@@ -2,6 +2,10 @@
 
 Three Apache VMs behind a regional passthrough (layer 4) Network Load Balancer.
 
+| Lab ID | Direct link |
+|---|---|
+| TBD | TBD |
+
 > **ACE exam note:** a passthrough NLB is regional, works at layer 4, and keeps the client IP. Target pools need a **legacy** HTTP health check.
 
 ## Task 1. Create three web server VMs

@@ -2,6 +2,10 @@
 
 Create a VM in the console and another with gcloud, install NGINX, and reach it over HTTP.
 
+| Lab ID | Direct link |
+|---|---|
+| TBD | TBD |
+
 > **ACE exam note:** know machine families (E2, N2, C3), regions vs zones, boot disk images, network tags, and `--tags=http-server` + the default-allow-http firewall rule.
 
 ## Task 1. Set region and zone
