@@ -7,6 +7,7 @@ Google Get Certified cohort ACE15 (6 weeks from 2026-11-02). The exam voucher ne
 | Week | Skill badge | Guide | Status |
 |---|---|---|---|
 | 1 | Implement Load Balancing on Compute Engine | [week-01-load-balancing](week-01-load-balancing/) (5 labs + challenge) | Completed 2026-11-06 |
+| 1 | Google Cloud Fundamentals: Core Infrastructure (course, not one of the 7 skill badges) | [week-01-core-infrastructure](week-01-core-infrastructure/) (module notes) | Not started |
 | 2 | Set Up an App Dev Environment on Google Cloud | — | Not started |
 | 3 | Build a Secure Google Cloud Network | — | Not started |
 | 4 | Cloud Security Fundamentals | — | Not started |
