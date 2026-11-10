@@ -29,7 +29,7 @@ One heading per module, linked to its notes. Each section title links to its not
 | 2.5 [Security](02-introducing-google-cloud/#section-25-security) | [▶ 5:41](https://youtu.be/BggWZl8qTzk) |
 | 2.6 [Open source ecosystems](02-introducing-google-cloud/#section-26-open-source-ecosystems) | [▶ 0:54](https://youtu.be/gYZGSrNffF8) |
 | 2.7 [Pricing and billing](02-introducing-google-cloud/#section-27-pricing-and-billing) | [▶ 3:16](https://youtu.be/OTD61ZfnO28) |
-| 2.8 [Quiz](02-introducing-google-cloud/#section-28-quiz) | No video. Passed 100% |
+| 2.8 [Quiz](02-introducing-google-cloud/#section-28-quiz) | No video |
 
 Add one row per section video, in course order. Start a new `### Module N` heading and table for each new module.
 

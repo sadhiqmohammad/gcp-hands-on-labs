@@ -144,13 +144,60 @@ Key concepts:
 
 ## Section 2.8 Quiz
 
-Module 2 quiz. Passing score: 66%. Correct answers, with the course's feedback where it gave any:
+The module 2 quiz questions. The correct answer is marked ✅. The explanations draw on this module's sections, and say so where the course doesn't cover an option.
 
-1. **Primary benefit of using resources in several zones within a region?** For improved fault tolerance.
-2. **Which type of cloud service binds application code to libraries that give access to the infrastructure the application needs?** Platform as a service. Course feedback: PaaS is designed for developers. It provides the SDKs, libraries and runtime environments needed to build and deploy applications without managing the underlying hardware or OS.
-3. **Why use resources in several regions around the world?** To bring applications closer to users around the world, and for improved fault tolerance.
+### Question 1
 
-Distractors worth remembering: better performance and discounts (Q1), IaaS, SaaS, virtualized data centers and hybrid cloud (Q2), improved security, localized app versions and discounts (Q3).
+What is the primary benefit to a Google Cloud customer of using resources in several zones within a region?
+
+- For expanding services to customers in new areas
+- ✅ **For improved fault tolerance**
+- For getting discounts on other zones
+- For better performance
+
+**Why it's correct:** a zone is where resources are deployed, and you choose the zone so your resources have redundancy (Section 2.3). If one zone has a problem, copies in the other zones of the same region keep running.
+
+**Why the others are wrong:**
+
+- *Expanding to new areas:* zones in one region sit in the same geographic area. Reaching users in new areas is what multiple **regions** are for (Section 2.3).
+- *Discounts on other zones:* the course mentions no zone-based discounts. The discounts it covers are Compute Engine sustained-use discounts, earned by running a VM for more than 25% of a month (Section 2.7).
+- *Better performance:* the course ties performance and latency to where you are relative to your users. Several zones in the same region don't put you closer to users, so the benefit is resilience, not speed.
+
+### Question 2
+
+What type of cloud computing service lets you bind your application code to libraries that give access to the infrastructure your application needs?
+
+- Infrastructure as a service
+- Virtualized data centers
+- ✅ **Platform as a service**
+- Software as a service
+- Hybrid cloud
+
+**Why it's correct:** the course defines PaaS as binding code to libraries that give access to the infrastructure the application needs, so more resources go to application logic (Section 2.2). The quiz feedback adds that PaaS is designed for developers: it provides the SDKs, libraries and runtime environments to build and deploy applications without managing the underlying hardware or OS. App Engine is the Google Cloud example.
+
+**Why the others are wrong:**
+
+- *Infrastructure as a service:* IaaS gives you raw compute, storage and network resources, like a virtual data center. You manage what runs on them yourself (Section 2.2). Example: Compute Engine.
+- *Virtualized data centers:* this is the second wave of cloud, not a service type. It introduced IaaS and PaaS, but you still maintain the infrastructure (Sections 2.1 and 2.2).
+- *Software as a service:* SaaS delivers a complete application that end users consume over the internet, such as Gmail or Docs. You don't bind your own code to anything (Section 2.2).
+- *Hybrid cloud:* not covered in this module. It isn't one of the service models the course describes.
+
+### Question 3
+
+Why might a Google Cloud customer use resources in several regions around the world?
+
+- To improve security
+- ✅ **To bring their applications closer to users around the world, and for improved fault tolerance**
+- To offer localized application versions in different regions
+- To earn discounts
+
+**Why it's correct:** running resources in different regions brings applications closer to users around the world, and protects against issues that affect a whole region, such as a natural disaster (Section 2.3).
+
+**Why the others are wrong:**
+
+- *Improve security:* Google's security comes from its layered infrastructure (Section 2.5), which applies wherever you run. Spreading across regions doesn't add security.
+- *Localized application versions:* the course never gives this as a reason. Regions are about latency and resilience, not different app versions.
+- *Earn discounts:* the course mentions no region-based discounts. Its discounts are sustained-use discounts (Section 2.7).
 
 ## Review questions
 
