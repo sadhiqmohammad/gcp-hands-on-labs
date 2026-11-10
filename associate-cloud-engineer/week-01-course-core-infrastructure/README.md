@@ -26,6 +26,7 @@ One heading per module, linked to its notes. Each section title links to its not
 | 2.2 [IaaS and PaaS](02-introducing-google-cloud/#section-22-iaas-and-paas) | [▶ 2:28](https://youtu.be/C7cb6kFhNmw) |
 | 2.3 [The Google Cloud network](02-introducing-google-cloud/#section-23-the-google-cloud-network) | [▶ 2:56](https://youtu.be/SDGJqKIE5yY) |
 | 2.4 [Environmental impact](02-introducing-google-cloud/#section-24-environmental-impact) | [▶ 1:30](https://youtu.be/MwZiq-DRGFo) |
+| 2.5 [Security](02-introducing-google-cloud/#section-25-security) | [▶ 5:41](https://youtu.be/BggWZl8qTzk) |
 
 Add one row per section video, in course order. Start a new `### Module N` heading and table for each new module.
 

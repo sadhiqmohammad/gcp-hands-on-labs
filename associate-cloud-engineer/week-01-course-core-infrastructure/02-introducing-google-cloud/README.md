@@ -85,6 +85,26 @@ Key concepts:
   | Second decade | First company to achieve 100% renewable energy |
   | By 2030 (goal) | First major company to operate on carbon-free energy 24/7, 365 days a year |
 
+## Section 2.5 Security
+
+Video: [Security](https://youtu.be/BggWZl8qTzk) (5m 41s)
+
+Key concepts:
+
+- **Why security matters to Google:** nine Google services each have more than one billion users, so design for security runs throughout the infrastructure that Google Cloud and Google services run on.
+- **Progressive layers:** the security infrastructure is explained in layers, from physical security of the data centers, through securing the hardware and software, to the technical constraints and processes behind operational security.
+
+  | Layer | Key security features |
+  |---|---|
+  | Hardware infrastructure | **Hardware design and provenance:** Google custom-designs its server boards and networking equipment, and custom chips including a hardware security chip being deployed on servers and peripherals. **Secure boot stack:** cryptographic signatures over the BIOS, bootloader, kernel and base OS image make sure machines boot the correct software. **Premises security:** Google designs and builds its own data centers with multiple layers of physical protection, and only a very small number of employees can access them. In third-party data centers, Google adds its own physical security measures on top of the operator's. |
+  | Service deployment | **Encryption of inter-service communication:** Google services talk to each other with remote procedure calls (RPCs). The infrastructure gives RPC data cryptographic privacy and integrity, and automatically encrypts all infrastructure RPC traffic between data centers. Hardware cryptographic accelerators are being deployed to extend default encryption to RPC traffic inside data centers. |
+  | User identity | **Central identity service:** usually seen by users as the Google login page. Beyond username and password, it challenges users for more information based on risk factors, such as whether they signed in from the same device or a similar location before. Users can add secondary factors, including devices based on the Universal 2nd Factor (U2F) open standard. |
+  | Storage services | **Encryption at rest:** most applications reach physical storage indirectly through storage services, which apply encryption with centrally managed keys. Google also enables hardware encryption support in hard drives and SSDs. |
+  | Internet communication | **Google Front End (GFE):** internet-facing Google services register with the GFE, which terminates all TLS connections with a public-private key pair and an X.509 certificate from a Certificate Authority (CA), and follows best practices such as perfect forward secrecy. **Denial of Service (DoS) protection:** Google's scale lets it absorb many DoS attacks, and multi-tier, multi-layer DoS protections further reduce risk to services behind a GFE. |
+  | Operational security | **Intrusion detection:** rules and machine intelligence warn security teams of possible incidents, and Red Team exercises measure and improve detection and response. **Reducing insider risk:** Google aggressively limits and actively monitors employees with administrative access. **Employee U2F use:** employee accounts require U2F-compatible Security Keys to guard against phishing. **Software development practices:** central source control, two-party review of new code, and libraries that stop developers introducing certain classes of security bugs. A Vulnerability Rewards Program pays anyone who finds and reports bugs in Google's infrastructure or applications. |
+
+- **Further reading:** [cloud.google.com/security/security-design](https://cloud.google.com/security/security-design).
+
 ## Review questions
 
 - What are the five traits of cloud computing, as NIST defines it?
@@ -96,3 +116,6 @@ Key concepts:
 - Why run resources in more than one region, and what does a Spanner multi-region configuration add?
 - What does ISO 14001 certification cover, and what makes the Hamina data center notable?
 - What are Google's three sustainability milestones, including the 2030 goal?
+- Name the six layers of Google's security infrastructure, from hardware up to operations.
+- What does the Google Front End do, and how does Google protect against DoS attacks?
+- How are data in transit between services and data at rest protected?
