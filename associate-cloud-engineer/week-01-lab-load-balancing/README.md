@@ -10,7 +10,7 @@ Skill badge course 648, "Implementing Cloud Load Balancing for Compute Engine". 
 |---|---|---|---|
 | 1 | [Create a Virtual Machine](01-create-a-virtual-machine/) | TBD | A VM from the console and from gcloud, with NGINX |
 | 2 | [Getting Started with Cloud Shell and gcloud](02-cloud-shell-and-gcloud/) | TBD | gcloud config, filtering, SSH, firewall basics |
-| 3 | [Set Up a Network Load Balancer](03-network-load-balancer/) | [GSP007](https://www.skills.google/course_templates/648/labs/613022) | 3 Apache VMs behind a regional layer 4 LB |
+| 3 | [Configure a Passthrough Network Load Balancer](03-network-load-balancer/) | [GSP007](https://www.skills.google/course_templates/648/labs/613022) | 3 Apache VMs behind a regional layer 4 LB |
 | 4 | [Set Up an Application Load Balancer](04-application-load-balancer/) | [GSP155](https://www.skills.google/course_templates/648/labs/613023) | MIG + global layer 7 HTTP LB |
 | 5 | [Internal Application Load Balancer](05-internal-application-load-balancer/) | [GSP041](https://www.skills.google/course_templates/648/labs/613024) | Private backend MIG behind a regional internal LB, public frontend VM |
 | 6 | [Challenge Lab](06-challenge-lab/) | [GSP313](https://www.skills.google/course_templates/648/labs/613025) | Lab 3 NLB and Lab 4 ALB rebuilt from the task list, exact names graded |

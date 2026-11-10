@@ -1,4 +1,4 @@
-# Lab 3: Set Up a Network Load Balancer
+# Lab 3: Configure a Passthrough Network Load Balancer
 
 Three Apache VMs behind a regional passthrough (layer 4) Network Load Balancer.
 
