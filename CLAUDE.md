@@ -6,9 +6,10 @@ Step-by-step Google Cloud lab guides and notes from Sadhiq's GCP certification p
 
 - `README.md`: certs overview table. Keep it in sync when a cert or week changes.
 - `<cert>/` one top-level folder per certification, e.g. `associate-cloud-engineer/`, later `professional-cloud-architect/`.
-  - `<cert>/README.md`: skill badge tracker (week, badge, guide link, status).
-  - `week-NN-<topic>/README.md`: week index with a module table (`#`, Lab, Lab ID, What you build), shared variables and an exam recap.
-  - `week-NN-<topic>/NN-<lab-name>/README.md`: one guide per lab, numbered in course order. The challenge lab is the last folder, `NN-challenge-lab/`.
+  - `<cert>/README.md`: tracker (week, type, name, guide link, status). Type is Lab or Course.
+  - Two kinds of week folder, named by type:
+    - `week-NN-lab-<topic>/`: a skill badge made of labs. `README.md` is the week index with a lab table (`#`, Lab, Lab ID, What you build), shared variables and an exam recap. `NN-<lab-name>/README.md` is one guide per lab, numbered in course order. The challenge lab is the last folder, `NN-challenge-lab/`.
+    - `week-NN-course-<topic>/`: a course made of modules. No Lab IDs. `README.md` is the course index with a module table (`#`, Module, Sections, Notes, Status). `NN-<module-name>/README.md` holds one module's notes, with one `## Section N.M <title>` per course section listing its key concepts.
   - `side-labs/`: labs outside the cohort plan. `notes/`: exam tips.
 - `shared/`: material reused across certs. If a lab fits more than one cert, keep the full guide where it was first done and link to it.
 
@@ -32,8 +33,12 @@ Then `## Task N. <name>` sections that mirror the lab's tasks, each with copy-pa
 
 - Use `$REGION` and `$ZONE` variables; labs assign their own region, zone and resource names, so say so.
 - Use `TBD` for any Lab ID or link not yet confirmed. Lab pages need a Google Skills sign-in, so never guess IDs or links. Ask Sadhiq.
-- When adding or renaming a lab, update the week index table and the badge tracker.
+- When adding or renaming a lab, update the week index table and the tracker.
 - Plain, direct prose. No em dashes.
+
+## Course notes format
+
+Course module notes use only content from the official course. Never fill module titles, sections or concepts from memory or general knowledge; the course outline needs a Google Skills sign-in, so use `TBD` and ask Sadhiq to paste the course text. The template is in `associate-cloud-engineer/week-01-course-core-infrastructure/README.md`. When adding a module, update the course index table.
 
 ## Git
 
