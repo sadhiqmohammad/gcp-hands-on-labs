@@ -12,7 +12,7 @@ Course notes for later review. This is a course, not a lab: it has modules inste
 
 | # | Module | Sections | Notes | Status |
 |---|---|---|---|---|
-| 1 | TBD | TBD | — | Not started |
+| 1 | Course Introduction | 1.1 Course Introduction | [01-course-introduction](01-course-introduction/) | Completed 2026-11-09 |
 
 Add one row per module, in course order.
 
