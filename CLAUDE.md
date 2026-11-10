@@ -38,7 +38,16 @@ Then `## Task N. <name>` sections that mirror the lab's tasks, each with copy-pa
 
 ## Course notes format
 
-Course module notes use only content from the official course. Never fill module titles, sections or concepts from memory or general knowledge. Course content is delivered as videos on the Qwiklabs courses YouTube channel (https://www.youtube.com/@qwiklabs-courses2043). Sadhiq posts each video link while working through the course; fetch that video's transcript (Apify YouTube transcript actor) and summarise the key concepts from the transcript only, linking the video under its section. If no transcript is available, say so and ask Sadhiq rather than guessing. The template is in `associate-cloud-engineer/week-01-course-core-infrastructure/README.md`. When adding a section or module, update the course index: a new row in that module's table, or a new module heading and table.
+Course module notes use only content from the official course. Never fill module titles, sections or concepts from memory or general knowledge. Course content is delivered as videos on the Qwiklabs courses YouTube channel (https://www.youtube.com/@qwiklabs-courses2043). Sadhiq posts each video link while working through the course; fetch that video's transcript and summarise the key concepts from the transcript only, linking the video under its section. If no transcript is available, say so and ask Sadhiq rather than guessing.
+
+Fetch transcripts with `yt-dlp` (installed with Homebrew), which is free. Download only the captions, into the session scratchpad and never into the repo:
+
+```bash
+yt-dlp -q --no-warnings --skip-download --write-subs --write-auto-subs \
+  --sub-langs en --sub-format vtt -o "<scratchpad>/yt/%(id)s" <video-url>
+```
+
+Then read the `.vtt` text with the timestamps and tags stripped. Don't use Apify or any other paid service for transcripts: it uses Sadhiq's paid credits. If `yt-dlp` can't get captions, ask Sadhiq before trying anything else. The template is in `associate-cloud-engineer/week-01-course-core-infrastructure/README.md`. When adding a section or module, update the course index: a new row in that module's table, or a new module heading and table.
 
 ## Git
 
