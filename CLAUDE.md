@@ -9,7 +9,7 @@ Step-by-step Google Cloud lab guides and notes from Sadhiq's GCP certification p
   - `<cert>/README.md`: tracker (week, type, name, guide link, status). Type is Lab or Course.
   - Two kinds of week folder, named by type:
     - `week-NN-lab-<topic>/`: a skill badge made of labs. `README.md` is the week index with a lab table (`#`, Lab, Lab ID, What you build), shared variables and an exam recap. `NN-<lab-name>/README.md` is one guide per lab, numbered in course order. The challenge lab is the last folder, `NN-challenge-lab/`.
-    - `week-NN-course-<topic>/`: a course made of modules. No Lab IDs. `README.md` is the course index with one row per section video (`#`, Module, Section, Video, Notes); no status column. `NN-<module-name>/README.md` holds one module's notes, with one `## Section N.M <title>` per course section listing its key concepts.
+    - `week-NN-course-<topic>/`: a course made of modules. No Lab IDs. `README.md` is the course index: one `### Module N: [<title>](NN-<module-name>/)` heading per module, each followed by a two-column table (Section, Video) with one row per section video. The section title links to its notes anchor, and the video link text is `▶ m:ss`. No status column. `NN-<module-name>/README.md` holds one module's notes, with one `## Section N.M <title>` per course section listing its key concepts.
   - `side-labs/`: labs outside the cohort plan. `notes/`: exam tips.
 - `shared/`: material reused across certs. If a lab fits more than one cert, keep the full guide where it was first done and link to it.
 
@@ -38,7 +38,7 @@ Then `## Task N. <name>` sections that mirror the lab's tasks, each with copy-pa
 
 ## Course notes format
 
-Course module notes use only content from the official course. Never fill module titles, sections or concepts from memory or general knowledge. Course content is delivered as videos on the Qwiklabs courses YouTube channel (https://www.youtube.com/@qwiklabs-courses2043). Sadhiq posts each video link while working through the course; fetch that video's transcript (Apify YouTube transcript actor) and summarise the key concepts from the transcript only, linking the video under its section. If no transcript is available, say so and ask Sadhiq rather than guessing. The template is in `associate-cloud-engineer/week-01-course-core-infrastructure/README.md`. When adding a module, update the course index table.
+Course module notes use only content from the official course. Never fill module titles, sections or concepts from memory or general knowledge. Course content is delivered as videos on the Qwiklabs courses YouTube channel (https://www.youtube.com/@qwiklabs-courses2043). Sadhiq posts each video link while working through the course; fetch that video's transcript (Apify YouTube transcript actor) and summarise the key concepts from the transcript only, linking the video under its section. If no transcript is available, say so and ask Sadhiq rather than guessing. The template is in `associate-cloud-engineer/week-01-course-core-infrastructure/README.md`. When adding a section or module, update the course index: a new row in that module's table, or a new module heading and table.
 
 ## Git
 
