@@ -25,7 +25,74 @@ Key concepts:
 - **Why Google moved to the third wave:** Google's business couldn't move fast enough within the virtualization model, so it switched to a container-based architecture. Google Cloud makes this third-wave cloud available to customers.
 - **Google's view of the future:** every company, whatever its size or industry, will differentiate itself through technology, increasingly in the form of software. Great software is based on high-quality data, so every company is, or will become, a data company.
 
+## Section 2.2 IaaS and PaaS
+
+Video: [IaaS and PaaS](https://youtu.be/C7cb6kFhNmw) (2m 28s)
+
+Key concepts:
+
+- **Origin:** the move to virtualized data centers introduced two new types of offering, IaaS and PaaS.
+- **Service models compared:**
+
+  | Model | What it provides | How you pay | Google example |
+  |---|---|---|---|
+  | Infrastructure as a service (IaaS) | Raw compute, storage and network capabilities, organized virtually into resources similar to physical data centers | For the resources you allocate ahead of time | Compute Engine |
+  | Platform as a service (PaaS) | Binds code to libraries that give access to the infrastructure the application needs, so more resources go to application logic | For the resources you actually use | App Engine |
+
+- **Shift to managed services:** as cloud computing evolved, momentum moved toward managed infrastructure and managed services. Companies spend less time and money creating and maintaining technical infrastructure, focus more on business goals, and deliver products and services to customers more quickly and reliably.
+- **Serverless:** another step in the evolution of cloud computing. It removes the need for any infrastructure management, so developers concentrate on code rather than server configuration. Google serverless technologies:
+  - **Cloud Run:** deploys containerized, microservices-based applications in a fully managed environment.
+  - **Cloud Run functions:** manages event-driven code as a pay-as-you-go service.
+- **Software as a service (SaaS):** outside the scope of the course. SaaS provides the entire application stack: a complete cloud-based application that customers access and use. It is not installed on your local computer; it runs in the cloud and end users consume it directly over the internet. Google Workspace apps such as Gmail, Docs and Drive are examples.
+
+## Section 2.3 The Google Cloud network
+
+Video: [The Google Cloud network](https://youtu.be/SDGJqKIE5yY) (2m 56s)
+
+Key concepts:
+
+- **Google's global network:** Google Cloud runs on Google's own global network, the largest of its kind, built with billions of dollars of investment over many years. It is designed for the highest possible throughput and lowest possible latency.
+- **Content caching nodes:** more than 100 worldwide. High-demand content is cached there for quicker access, so applications answer user requests from the location with the quickest response time.
+- **Infrastructure:** redundant cloud regions and high-bandwidth connectivity, including subsea cables, deliver services to users wherever they are.
+- **Seven major geographic locations:** North America, South America, Europe, Africa, the Middle East, Asia and Australia.
+- **Why location matters:** where you place applications affects availability, durability and latency. Latency is the time a packet of information takes to travel from its source to its destination.
+- **Locations, regions and zones:**
+
+  | Level | What it is | Course example |
+  |---|---|---|
+  | Region | An independent geographic area, made up of zones | London (`europe-west2`), which currently has three zones |
+  | Zone | An area where Google Cloud resources are deployed | A Compute Engine VM runs in the zone you specify, for resource redundancy |
+  | Multi-region | Some services place resources across several regions | Spanner multi-region configurations replicate data across multiple zones in multiple regions, giving low-latency reads from locations such as the Netherlands and Belgium |
+
+- **Running in several regions:** brings applications closer to users around the world and protects against issues affecting a whole region, such as a natural disaster.
+- **Growing footprint:** the number of regions and zones keeps increasing. Current numbers are at [cloud.google.com/about/locations](https://cloud.google.com/about/locations).
+
+## Section 2.4 Environmental impact
+
+Video: [Environmental impact](https://youtu.be/MwZiq-DRGFo) (1m 30s)
+
+Key concepts:
+
+- **Energy use:** the virtual world, including Google Cloud's network, is built on physical infrastructure. Existing data centers use roughly 2% of the world's electricity, so Google works to run its data centers as efficiently as possible.
+- **Customer goals:** Google Cloud customers have their own environmental goals, and running workloads on Google Cloud can be part of meeting them.
+- **ISO 14001:** Google's data centers were the first to achieve this certification. It is a standard that maps out a framework for improving environmental performance through better resource efficiency and less waste.
+- **Hamina, Finland:** one of the most advanced and efficient data centers in Google's fleet. Its cooling system uses sea water from the Bay of Finland to reduce energy use, the first of its kind anywhere in the world.
+- **Google's milestones:**
+
+  | Period | Milestone |
+  |---|---|
+  | First decade | First major company to be carbon neutral |
+  | Second decade | First company to achieve 100% renewable energy |
+  | By 2030 (goal) | First major company to operate on carbon-free energy 24/7, 365 days a year |
+
 ## Review questions
 
 - What are the five traits of cloud computing, as NIST defines it?
 - How does the third wave of cloud differ from virtualized data centers?
+- How do IaaS and PaaS differ in what they provide and how you pay? Name a Google Cloud example of each.
+- Which two Google serverless technologies does the course name, and what does each do?
+- Where does SaaS fit, and which Google products are examples?
+- What is the relationship between a region and a zone? Give the course's example region.
+- Why run resources in more than one region, and what does a Spanner multi-region configuration add?
+- What does ISO 14001 certification cover, and what makes the Hamina data center notable?
+- What are Google's three sustainability milestones, including the 2030 goal?
