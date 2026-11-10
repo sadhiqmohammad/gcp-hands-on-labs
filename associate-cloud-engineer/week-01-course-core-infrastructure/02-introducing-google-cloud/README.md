@@ -85,6 +85,120 @@ Key concepts:
   | Second decade | First company to achieve 100% renewable energy |
   | By 2030 (goal) | First major company to operate on carbon-free energy 24/7, 365 days a year |
 
+## Section 2.5 Security
+
+Video: [Security](https://youtu.be/BggWZl8qTzk) (5m 41s)
+
+Key concepts:
+
+- **Why security matters to Google:** nine Google services each have more than one billion users, so design for security runs throughout the infrastructure that Google Cloud and Google services run on.
+- **Progressive layers:** the security infrastructure is explained in layers, from physical security of the data centers, through securing the hardware and software, to the technical constraints and processes behind operational security.
+
+  | Layer | Key security features |
+  |---|---|
+  | Hardware infrastructure | **Hardware design and provenance:** Google custom-designs its server boards and networking equipment, and custom chips including a hardware security chip being deployed on servers and peripherals. **Secure boot stack:** cryptographic signatures over the BIOS, bootloader, kernel and base OS image make sure machines boot the correct software. **Premises security:** Google designs and builds its own data centers with multiple layers of physical protection, and only a very small number of employees can access them. In third-party data centers, Google adds its own physical security measures on top of the operator's. |
+  | Service deployment | **Encryption of inter-service communication:** Google services talk to each other with remote procedure calls (RPCs). The infrastructure gives RPC data cryptographic privacy and integrity, and automatically encrypts all infrastructure RPC traffic between data centers. Hardware cryptographic accelerators are being deployed to extend default encryption to RPC traffic inside data centers. |
+  | User identity | **Central identity service:** usually seen by users as the Google login page. Beyond username and password, it challenges users for more information based on risk factors, such as whether they signed in from the same device or a similar location before. Users can add secondary factors, including devices based on the Universal 2nd Factor (U2F) open standard. |
+  | Storage services | **Encryption at rest:** most applications reach physical storage indirectly through storage services, which apply encryption with centrally managed keys. Google also enables hardware encryption support in hard drives and SSDs. |
+  | Internet communication | **Google Front End (GFE):** internet-facing Google services register with the GFE, which terminates all TLS connections with a public-private key pair and an X.509 certificate from a Certificate Authority (CA), and follows best practices such as perfect forward secrecy. **Denial of Service (DoS) protection:** Google's scale lets it absorb many DoS attacks, and multi-tier, multi-layer DoS protections further reduce risk to services behind a GFE. |
+  | Operational security | **Intrusion detection:** rules and machine intelligence warn security teams of possible incidents, and Red Team exercises measure and improve detection and response. **Reducing insider risk:** Google aggressively limits and actively monitors employees with administrative access. **Employee U2F use:** employee accounts require U2F-compatible Security Keys to guard against phishing. **Software development practices:** central source control, two-party review of new code, and libraries that stop developers introducing certain classes of security bugs. A Vulnerability Rewards Program pays anyone who finds and reports bugs in Google's infrastructure or applications. |
+
+- **Further reading:** [cloud.google.com/security/security-design](https://cloud.google.com/security/security-design).
+
+## Section 2.6 Open source ecosystems
+
+Video: [Open source ecosystems](https://youtu.be/gYZGSrNffF8) (54s)
+
+Key concepts:
+
+- **Vendor lock-in concern:** some organizations hesitate to move workloads to the cloud for fear of being locked into one vendor. If a customer decides Google is no longer the best provider for them, Google gives them the ability to run their applications elsewhere.
+- **Open source licenses:** Google publishes key elements of its technology under open source licenses, creating ecosystems that give customers options other than Google. Example: **TensorFlow**, an open source machine learning library developed inside Google, at the heart of a strong open source ecosystem.
+- **Interoperability at multiple layers of the stack:**
+  - **Kubernetes and Google Kubernetes Engine (GKE):** mix and match microservices running across different clouds.
+  - **Google Cloud Observability:** monitor workloads across multiple cloud providers.
+
+## Section 2.7 Pricing and billing
+
+Video: [Pricing and billing](https://youtu.be/OTD61ZfnO28) (3m 16s)
+
+Key concepts:
+
+- **Per-second billing:** Google was the first major cloud provider to offer per-second billing for its IaaS compute offering, Compute Engine. It is now also offered for:
+  - Google Kubernetes Engine (container infrastructure as a service)
+  - Managed Service for Apache Spark (the equivalent of the big data system Hadoop, operated as a service)
+  - App Engine flexible environment VMs (platform as a service)
+- **Sustained-use discounts:** applied automatically by Compute Engine when you run a VM instance for a significant portion of the billing month. When an instance runs for more than 25% of a month, you get a discount for every incremental minute you use it.
+- **Custom VM types:** fine-tune Compute Engine VMs with the optimal amounts of vCPU and memory for an application, so pricing fits the workload.
+- **Pricing calculator:** estimates your costs, at [cloud.google.com/products/calculator](https://cloud.google.com/products/calculator).
+- **Budgets:** defined at the billing account level or the project level. A budget can be a fixed limit or tied to another metric, such as a percentage of the previous month's spend.
+- **Alerts:** notify you when costs approach the budget limit. Example: with a $20,000 budget and an alert at 90%, you are notified when spend reaches $18,000. Alerts are generally set at 50%, 90% and 100%, but can be customized.
+- **Reports:** a visual tool in the Google Cloud console to monitor spend by project or service.
+- **Quotas:** prevent over-consumption of resources caused by an error or a malicious attack, protecting both account owners and the Google Cloud community. Both types apply at the project level:
+
+  | Quota type | What it limits | Course example |
+  |---|---|---|
+  | Rate quota | Usage within a time window; resets after a specific time | GKE allows 3,000 API calls per project every 100 seconds by default, then the limit resets |
+  | Allocation quota | Number of resources you can have in a project | Each project can have no more than 15 VPC networks |
+
+- **Changing quotas:** all projects start with the same quotas, but you can raise some by requesting an increase from Google Cloud Support.
+
+## Section 2.8 Quiz
+
+The module 2 quiz questions. The correct answer is marked ✅. The explanations draw on this module's sections, and say so where the course doesn't cover an option.
+
+### Question 1
+
+What is the primary benefit to a Google Cloud customer of using resources in several zones within a region?
+
+- For expanding services to customers in new areas
+- ✅ **For improved fault tolerance**
+- For getting discounts on other zones
+- For better performance
+
+**Why it's correct:** a zone is where resources are deployed, and you choose the zone so your resources have redundancy (Section 2.3). If one zone has a problem, copies in the other zones of the same region keep running.
+
+**Why the others are wrong:**
+
+- *Expanding to new areas:* zones in one region sit in the same geographic area. Reaching users in new areas is what multiple **regions** are for (Section 2.3).
+- *Discounts on other zones:* the course mentions no zone-based discounts. The discounts it covers are Compute Engine sustained-use discounts, earned by running a VM for more than 25% of a month (Section 2.7).
+- *Better performance:* the course ties performance and latency to where you are relative to your users. Several zones in the same region don't put you closer to users, so the benefit is resilience, not speed.
+
+### Question 2
+
+What type of cloud computing service lets you bind your application code to libraries that give access to the infrastructure your application needs?
+
+- Infrastructure as a service
+- Virtualized data centers
+- ✅ **Platform as a service**
+- Software as a service
+- Hybrid cloud
+
+**Why it's correct:** the course defines PaaS as binding code to libraries that give access to the infrastructure the application needs, so more resources go to application logic (Section 2.2). The quiz feedback adds that PaaS is designed for developers: it provides the SDKs, libraries and runtime environments to build and deploy applications without managing the underlying hardware or OS. App Engine is the Google Cloud example.
+
+**Why the others are wrong:**
+
+- *Infrastructure as a service:* IaaS gives you raw compute, storage and network resources, like a virtual data center. You manage what runs on them yourself (Section 2.2). Example: Compute Engine.
+- *Virtualized data centers:* this is the second wave of cloud, not a service type. It introduced IaaS and PaaS, but you still maintain the infrastructure (Sections 2.1 and 2.2).
+- *Software as a service:* SaaS delivers a complete application that end users consume over the internet, such as Gmail or Docs. You don't bind your own code to anything (Section 2.2).
+- *Hybrid cloud:* not covered in this module. It isn't one of the service models the course describes.
+
+### Question 3
+
+Why might a Google Cloud customer use resources in several regions around the world?
+
+- To improve security
+- ✅ **To bring their applications closer to users around the world, and for improved fault tolerance**
+- To offer localized application versions in different regions
+- To earn discounts
+
+**Why it's correct:** running resources in different regions brings applications closer to users around the world, and protects against issues that affect a whole region, such as a natural disaster (Section 2.3).
+
+**Why the others are wrong:**
+
+- *Improve security:* Google's security comes from its layered infrastructure (Section 2.5), which applies wherever you run. Spreading across regions doesn't add security.
+- *Localized application versions:* the course never gives this as a reason. Regions are about latency and resilience, not different app versions.
+- *Earn discounts:* the course mentions no region-based discounts. Its discounts are sustained-use discounts (Section 2.7).
+
 ## Review questions
 
 - What are the five traits of cloud computing, as NIST defines it?
@@ -96,3 +210,10 @@ Key concepts:
 - Why run resources in more than one region, and what does a Spanner multi-region configuration add?
 - What does ISO 14001 certification cover, and what makes the Hamina data center notable?
 - What are Google's three sustainability milestones, including the 2030 goal?
+- Name the six layers of Google's security infrastructure, from hardware up to operations.
+- What does the Google Front End do, and how does Google protect against DoS attacks?
+- How are data in transit between services and data at rest protected?
+- How does Google reduce the risk of vendor lock-in? Name the open source and multi-cloud examples.
+- When does a Compute Engine sustained-use discount apply?
+- At which levels can you set a budget, and how do budget alerts work?
+- What is the difference between a rate quota and an allocation quota? Give the course's example of each.
