@@ -10,12 +10,12 @@ Course notes for later review. This is a course, not a lab: it has modules inste
 
 ## Modules
 
-| # | Module | Sections | Notes | Status |
+| # | Module | Section | Video | Notes |
 |---|---|---|---|---|
-| 1 | Course Introduction | 1.1 Course Introduction | [01-course-introduction](01-course-introduction/) | Completed 2026-11-09 |
-| 2 | Introducing Google Cloud | 2.1 Cloud computing overview | [02-introducing-google-cloud](02-introducing-google-cloud/) | In progress |
+| 1 | Course Introduction | 1.1 Course Introduction | [Watch](https://youtu.be/xVmam01f4Fw) (2m 1s) | [01-course-introduction](01-course-introduction/) |
+| 2 | Introducing Google Cloud | 2.1 Cloud computing overview | [Watch](https://www.youtube.com/watch?v=ph5hjgOAf40) (3m 16s) | [02-introducing-google-cloud](02-introducing-google-cloud/#section-21-cloud-computing-overview) |
 
-Add one row per module, in course order.
+Add one row per section video, in course order.
 
 ## Module folder layout
 
