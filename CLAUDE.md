@@ -38,7 +38,7 @@ Then `## Task N. <name>` sections that mirror the lab's tasks, each with copy-pa
 
 ## Course notes format
 
-Course module notes use only content from the official course. Never fill module titles, sections or concepts from memory or general knowledge; the course outline needs a Google Skills sign-in, so use `TBD` and ask Sadhiq to paste the course text. The template is in `associate-cloud-engineer/week-01-course-core-infrastructure/README.md`. When adding a module, update the course index table.
+Course module notes use only content from the official course. Never fill module titles, sections or concepts from memory or general knowledge. Course content is delivered as videos on the Qwiklabs courses YouTube channel (https://www.youtube.com/@qwiklabs-courses2043). Sadhiq posts each video link while working through the course; fetch that video's transcript (Apify YouTube transcript actor) and summarise the key concepts from the transcript only, linking the video under its section. If no transcript is available, say so and ask Sadhiq rather than guessing. The template is in `associate-cloud-engineer/week-01-course-core-infrastructure/README.md`. When adding a module, update the course index table.
 
 ## Git
 

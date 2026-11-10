@@ -6,7 +6,7 @@ Course notes for later review. This is a course, not a lab: it has modules inste
 |---|---|
 | Course 60 | [Open in Google Skills](https://www.skills.google/course_templates/60) |
 
-> **Source rule:** notes here come only from the official course content. The module list sits behind the Google Skills sign-in, so module and section titles stay `TBD` until copied from the course.
+> **Source rule:** notes here come only from the official course videos, published on the [Qwiklabs courses YouTube channel](https://www.youtube.com/@qwiklabs-courses2043). Each section's notes are summarised from that video's transcript and link to the video. Module and section titles stay `TBD` until a video is added.
 
 ## Modules
 
@@ -36,11 +36,15 @@ week-01-course-core-infrastructure/
 
 ## Section N.1 <Section title>
 
+Video: [<video title>](https://www.youtube.com/watch?v=<id>)
+
 Key concepts:
 
 - **<Concept>:** <what the course says about it>
 
 ## Section N.2 <Section title>
+
+Video: [<video title>](https://www.youtube.com/watch?v=<id>)
 
 Key concepts:
 
