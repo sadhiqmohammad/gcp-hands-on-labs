@@ -14,6 +14,9 @@ Course notes for later review. This is a course, not a lab: it has modules inste
 |---|---|---|---|---|
 | 1 | Course Introduction | 1.1 Course Introduction | [Watch](https://youtu.be/xVmam01f4Fw) (2m 1s) | [01-course-introduction](01-course-introduction/) |
 | 2 | Introducing Google Cloud | 2.1 Cloud computing overview | [Watch](https://www.youtube.com/watch?v=ph5hjgOAf40) (3m 16s) | [02-introducing-google-cloud](02-introducing-google-cloud/#section-21-cloud-computing-overview) |
+| 2 | Introducing Google Cloud | 2.2 IaaS and PaaS | [Watch](https://youtu.be/C7cb6kFhNmw) (2m 28s) | [02-introducing-google-cloud](02-introducing-google-cloud/#section-22-iaas-and-paas) |
+| 2 | Introducing Google Cloud | 2.3 The Google Cloud network | [Watch](https://youtu.be/SDGJqKIE5yY) (2m 56s) | [02-introducing-google-cloud](02-introducing-google-cloud/#section-23-the-google-cloud-network) |
+| 2 | Introducing Google Cloud | 2.4 Environmental impact | [Watch](https://youtu.be/MwZiq-DRGFo) (1m 30s) | [02-introducing-google-cloud](02-introducing-google-cloud/#section-24-environmental-impact) |
 
 Add one row per section video, in course order.
 
