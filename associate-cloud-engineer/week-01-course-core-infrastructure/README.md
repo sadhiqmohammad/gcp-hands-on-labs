@@ -12,24 +12,24 @@ Course notes for later review. This is a course, not a lab: it has modules inste
 
 One heading per module, linked to its notes. Each section title links to its notes, and the video link shows its length.
 
-### Module 1: [Course Introduction](01-course-introduction/)
+### Module 1: [Course Introduction](01-course-introduction/README.md)
 
 | Section | Video |
 |---|---|
-| 1.1 [Course Introduction](01-course-introduction/#section-11-course-introduction) | [▶ 2:01](https://youtu.be/xVmam01f4Fw) |
+| 1.1 [Course Introduction](01-course-introduction/README.md#section-11-course-introduction) | [▶ 2:01](https://youtu.be/xVmam01f4Fw) |
 
-### Module 2: [Introducing Google Cloud](02-introducing-google-cloud/)
+### Module 2: [Introducing Google Cloud](02-introducing-google-cloud/README.md)
 
 | Section | Video |
 |---|---|
-| 2.1 [Cloud computing overview](02-introducing-google-cloud/#section-21-cloud-computing-overview) | [▶ 3:16](https://www.youtube.com/watch?v=ph5hjgOAf40) |
-| 2.2 [IaaS and PaaS](02-introducing-google-cloud/#section-22-iaas-and-paas) | [▶ 2:28](https://youtu.be/C7cb6kFhNmw) |
-| 2.3 [The Google Cloud network](02-introducing-google-cloud/#section-23-the-google-cloud-network) | [▶ 2:56](https://youtu.be/SDGJqKIE5yY) |
-| 2.4 [Environmental impact](02-introducing-google-cloud/#section-24-environmental-impact) | [▶ 1:30](https://youtu.be/MwZiq-DRGFo) |
-| 2.5 [Security](02-introducing-google-cloud/#section-25-security) | [▶ 5:41](https://youtu.be/BggWZl8qTzk) |
-| 2.6 [Open source ecosystems](02-introducing-google-cloud/#section-26-open-source-ecosystems) | [▶ 0:54](https://youtu.be/gYZGSrNffF8) |
-| 2.7 [Pricing and billing](02-introducing-google-cloud/#section-27-pricing-and-billing) | [▶ 3:16](https://youtu.be/OTD61ZfnO28) |
-| 2.8 [Quiz](02-introducing-google-cloud/#section-28-quiz) | No video |
+| 2.1 [Cloud computing overview](02-introducing-google-cloud/README.md#section-21-cloud-computing-overview) | [▶ 3:18](https://www.youtube.com/watch?v=ph5hjgOAf40) |
+| 2.2 [IaaS and PaaS](02-introducing-google-cloud/README.md#section-22-iaas-and-paas) | [▶ 2:28](https://youtu.be/C7cb6kFhNmw) |
+| 2.3 [The Google Cloud network](02-introducing-google-cloud/README.md#section-23-the-google-cloud-network) | [▶ 2:56](https://youtu.be/SDGJqKIE5yY) |
+| 2.4 [Environmental impact](02-introducing-google-cloud/README.md#section-24-environmental-impact) | [▶ 1:30](https://youtu.be/MwZiq-DRGFo) |
+| 2.5 [Security](02-introducing-google-cloud/README.md#section-25-security) | [▶ 5:41](https://youtu.be/BggWZl8qTzk) |
+| 2.6 [Open source ecosystems](02-introducing-google-cloud/README.md#section-26-open-source-ecosystems) | [▶ 0:54](https://youtu.be/gYZGSrNffF8) |
+| 2.7 [Pricing and billing](02-introducing-google-cloud/README.md#section-27-pricing-and-billing) | [▶ 3:16](https://youtu.be/OTD61ZfnO28) |
+| 2.8 [Quiz](02-introducing-google-cloud/README.md#section-28-quiz) | No video |
 
 Add one row per section video, in course order. Start a new `### Module N` heading and table for each new module.
 
