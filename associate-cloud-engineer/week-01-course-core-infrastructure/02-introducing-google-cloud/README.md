@@ -105,6 +105,53 @@ Key concepts:
 
 - **Further reading:** [cloud.google.com/security/security-design](https://cloud.google.com/security/security-design).
 
+## Section 2.6 Open source ecosystems
+
+Video: [Open source ecosystems](https://youtu.be/gYZGSrNffF8) (54s)
+
+Key concepts:
+
+- **Vendor lock-in concern:** some organizations hesitate to move workloads to the cloud for fear of being locked into one vendor. If a customer decides Google is no longer the best provider for them, Google gives them the ability to run their applications elsewhere.
+- **Open source licenses:** Google publishes key elements of its technology under open source licenses, creating ecosystems that give customers options other than Google. Example: **TensorFlow**, an open source machine learning library developed inside Google, at the heart of a strong open source ecosystem.
+- **Interoperability at multiple layers of the stack:**
+  - **Kubernetes and Google Kubernetes Engine (GKE):** mix and match microservices running across different clouds.
+  - **Google Cloud Observability:** monitor workloads across multiple cloud providers.
+
+## Section 2.7 Pricing and billing
+
+Video: [Pricing and billing](https://youtu.be/OTD61ZfnO28) (3m 16s)
+
+Key concepts:
+
+- **Per-second billing:** Google was the first major cloud provider to offer per-second billing for its IaaS compute offering, Compute Engine. It is now also offered for:
+  - Google Kubernetes Engine (container infrastructure as a service)
+  - Managed Service for Apache Spark (the equivalent of the big data system Hadoop, operated as a service)
+  - App Engine flexible environment VMs (platform as a service)
+- **Sustained-use discounts:** applied automatically by Compute Engine when you run a VM instance for a significant portion of the billing month. When an instance runs for more than 25% of a month, you get a discount for every incremental minute you use it.
+- **Custom VM types:** fine-tune Compute Engine VMs with the optimal amounts of vCPU and memory for an application, so pricing fits the workload.
+- **Pricing calculator:** estimates your costs, at [cloud.google.com/products/calculator](https://cloud.google.com/products/calculator).
+- **Budgets:** defined at the billing account level or the project level. A budget can be a fixed limit or tied to another metric, such as a percentage of the previous month's spend.
+- **Alerts:** notify you when costs approach the budget limit. Example: with a $20,000 budget and an alert at 90%, you are notified when spend reaches $18,000. Alerts are generally set at 50%, 90% and 100%, but can be customized.
+- **Reports:** a visual tool in the Google Cloud console to monitor spend by project or service.
+- **Quotas:** prevent over-consumption of resources caused by an error or a malicious attack, protecting both account owners and the Google Cloud community. Both types apply at the project level:
+
+  | Quota type | What it limits | Course example |
+  |---|---|---|
+  | Rate quota | Usage within a time window; resets after a specific time | GKE allows 3,000 API calls per project every 100 seconds by default, then the limit resets |
+  | Allocation quota | Number of resources you can have in a project | Each project can have no more than 15 VPC networks |
+
+- **Changing quotas:** all projects start with the same quotas, but you can raise some by requesting an increase from Google Cloud Support.
+
+## Section 2.8 Quiz
+
+Module 2 quiz. Passing score: 66%. Correct answers, with the course's feedback where it gave any:
+
+1. **Primary benefit of using resources in several zones within a region?** For improved fault tolerance.
+2. **Which type of cloud service binds application code to libraries that give access to the infrastructure the application needs?** Platform as a service. Course feedback: PaaS is designed for developers. It provides the SDKs, libraries and runtime environments needed to build and deploy applications without managing the underlying hardware or OS.
+3. **Why use resources in several regions around the world?** To bring applications closer to users around the world, and for improved fault tolerance.
+
+Distractors worth remembering: better performance and discounts (Q1), IaaS, SaaS, virtualized data centers and hybrid cloud (Q2), improved security, localized app versions and discounts (Q3).
+
 ## Review questions
 
 - What are the five traits of cloud computing, as NIST defines it?
@@ -119,3 +166,7 @@ Key concepts:
 - Name the six layers of Google's security infrastructure, from hardware up to operations.
 - What does the Google Front End do, and how does Google protect against DoS attacks?
 - How are data in transit between services and data at rest protected?
+- How does Google reduce the risk of vendor lock-in? Name the open source and multi-cloud examples.
+- When does a Compute Engine sustained-use discount apply?
+- At which levels can you set a budget, and how do budget alerts work?
+- What is the difference between a rate quota and an allocation quota? Give the course's example of each.
