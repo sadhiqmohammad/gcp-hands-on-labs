@@ -4,7 +4,7 @@ What cloud computing is, how it evolved, and what Google Cloud offers.
 
 ## Section 2.1 Cloud computing overview
 
-Video: [Cloud computing overview](https://www.youtube.com/watch?v=ph5hjgOAf40) (3m 16s)
+Video: [Cloud computing overview](https://www.youtube.com/watch?v=ph5hjgOAf40) (3m 18s)
 
 Key concepts:
 
