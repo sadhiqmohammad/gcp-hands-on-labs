@@ -31,6 +31,12 @@ One heading per module, linked to its notes. Each section title links to its not
 | 2.7 [Pricing and billing](02-introducing-google-cloud/README.md#section-27-pricing-and-billing) | [▶ 3:16](https://youtu.be/OTD61ZfnO28) |
 | 2.8 [Quiz](02-introducing-google-cloud/README.md#section-28-quiz) | No video |
 
+### Module 3: [Resources and Access in the Cloud](03-resources-and-access-in-the-cloud/README.md)
+
+| Section | Video |
+|---|---|
+| 3.1 [Google Cloud resource hierarchy](03-resources-and-access-in-the-cloud/README.md#section-31-google-cloud-resource-hierarchy) | [▶ 5:28](https://youtu.be/ecVv1L_TEo8) |
+
 Add one row per section video, in course order. Start a new `### Module N` heading and table for each new module.
 
 ## Module folder layout
