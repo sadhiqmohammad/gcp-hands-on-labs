@@ -41,6 +41,7 @@ One heading per module, linked to its notes. Each section title links to its not
 | 3.4 [Cloud Identity](03-resources-and-access-in-the-cloud/README.md#section-34-cloud-identity) | [▶ 1:17](https://youtu.be/EZccX9nFaiI) |
 | 3.5 [Interacting with Google Cloud](03-resources-and-access-in-the-cloud/README.md#section-35-interacting-with-google-cloud) | [▶ 3:40](https://youtu.be/lkchDTTMrZ8) |
 | 3.6 [Lab: Getting Started with Cloud Marketplace](03-resources-and-access-in-the-cloud/06-lab-cloud-marketplace/README.md) | Lab, no video |
+| 3.7 [Quiz](03-resources-and-access-in-the-cloud/README.md#section-37-quiz) | No video |
 
 Add one row per section video, in course order. Start a new `### Module N` heading and table for each new module.
 

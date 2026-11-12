@@ -165,6 +165,59 @@ What you do:
 - Enable the **Compute Engine API** and the **Infrastructure Manager API** when the deployment asks.
 - Open the site on the VM's external IP to confirm that Apache is running.
 
+## Section 3.7 Quiz
+
+The module 3 quiz questions. The correct answer is marked ✅. The explanations draw on this module's sections, and say so where the course doesn't cover an option.
+
+### Question 1
+
+Choose the correct completion: Services and APIs are enabled on a per-__________ basis.
+
+- Billing account
+- Organization
+- ✅ **Project**
+- Folder
+
+**Why it's correct:** projects are the basis for enabling and using Google Cloud services, such as managing APIs, enabling billing, adding and removing collaborators, and enabling other Google services (Section 3.1). The lab shows it too: the Marketplace deployment asks you to enable the Compute Engine API and the Infrastructure Manager API in the lab's project (Section 3.6).
+
+**Why the others are wrong:**
+
+- *Billing account:* module 3 doesn't cover billing accounts. Module 2 mentions them only as a level where budgets can be set (Section 2.7), not where services are enabled.
+- *Organization:* the organization node is the top of the hierarchy and holds folders and projects. Policies can be set there and inherited downward, but services are enabled per project (Section 3.1).
+- *Folder:* folders group projects and let you apply shared policies to them. They don't enable services (Section 3.1).
+
+### Question 2
+
+Which of these values is globally unique, permanent, and unchangeable, but can be modified by the customer during creation?
+
+- ✅ **The project ID**
+- The project name
+- The project number
+- The project's billing credit-card number
+
+**Why it's correct:** the project ID is globally unique and immutable after creation (Section 3.1). The quiz feedback adds that it can be changed during creation, which is the "modified by the customer during creation" part of the question.
+
+**Why the others are wrong:**
+
+- *The project name:* you create it, it doesn't need to be unique, and you can change it at any time (Section 3.1).
+- *The project number:* assigned by Google and mainly used internally by Google Cloud to track resources (Section 3.1). The course doesn't say the customer can set it.
+- *The project's billing credit-card number:* not covered in the course, and not a project identifier at all.
+
+### Question 3
+
+Select the list of IAM role types that are ordered from broadest to finest-grained.
+
+- Custom roles, predefined roles, basic roles
+- Predefined roles, custom roles, basic roles
+- ✅ **Basic roles, predefined roles, custom roles**
+
+**Why it's correct:** basic roles (owner, editor, viewer, billing administrator) are quite broad and affect all resources in a project. Predefined roles are sets offered by specific services, such as Compute Engine's `instanceAdmin`, so they are narrower. Custom roles hold exactly the permissions you define, such as an `instanceOperator` that can only stop and start VMs, so they are the finest-grained (Section 3.2).
+
+**Why the others are wrong:**
+
+- *Custom, predefined, basic:* this is the order reversed, from finest to broadest.
+- *Predefined, custom, basic:* basic roles are the broadest, so they can't come last.
+
 ## Review questions
 
 - Name the four levels of the resource hierarchy, from the bottom up.
