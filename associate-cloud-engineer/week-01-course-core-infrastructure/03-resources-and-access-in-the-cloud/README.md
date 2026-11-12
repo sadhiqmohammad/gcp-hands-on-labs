@@ -155,6 +155,16 @@ Key concepts:
   - Alerts and incident management.
   - Download it at cloud.google.com/app.
 
+## Section 3.6 Lab: Getting Started with Cloud Marketplace
+
+This section is a hands-on lab, not a video. Step-by-step guide: [Lab 3.6: Getting Started with Cloud Marketplace](06-lab-cloud-marketplace/README.md).
+
+What you do:
+
+- Use **Cloud Marketplace** to deploy a LAMP stack (Linux, Apache HTTP Server, MySQL, PHP and phpMyAdmin) on a Compute Engine instance.
+- Enable the **Compute Engine API** and the **Infrastructure Manager API** when the deployment asks.
+- Open the site on the VM's external IP to confirm that Apache is running.
+
 ## Review questions
 
 - Name the four levels of the resource hierarchy, from the bottom up.
@@ -182,3 +192,5 @@ Key concepts:
 - Which operating system is Cloud Shell based on, and how much persistent home directory storage does it have?
 - What does the Google APIs Explorer show, and what do the client libraries save you from?
 - Name three things you can do from the Google Cloud app.
+- Which two APIs does the Cloud Marketplace LAMP deployment ask you to enable?
+- Name the five components of the LAMP stack in the lab and the role of each.
