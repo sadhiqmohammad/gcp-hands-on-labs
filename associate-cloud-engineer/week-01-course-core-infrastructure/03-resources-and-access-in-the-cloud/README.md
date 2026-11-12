@@ -83,6 +83,19 @@ Key concepts:
   1. You must manage the permissions that define the custom role. Because of this, some organizations prefer predefined roles.
   2. Custom roles can only be applied at the **project or organization level**, not the folder level.
 
+## Section 3.3 Service accounts
+
+Video: [Service accounts](https://youtu.be/xoo5NfLqePY) (1m 38s)
+
+Key concepts:
+
+- **Service account:** lets you assign specific permissions to a virtual machine, so it can interact with other cloud services without human intervention. No person has to grant access manually each time the program runs.
+  - Example: an application in a VM needs to store data in Cloud Storage, and only that VM should have access, not anyone on the internet. Create a service account to authenticate that VM to Cloud Storage.
+- **Identity:** service accounts are named with an email address, but they use **cryptographic keys** instead of passwords to access resources.
+- **Roles still apply:** if a service account has Compute Engine's Instance Admin role, an application running in a VM with that service account can create, modify and delete other VMs.
+- **A service account is also a resource:** besides being an identity, it can have IAM policies of its own attached, just like any other Google Cloud resource.
+  - Example: Alice needs to manage which Google accounts can act as service accounts, so she gets the editor role on the service account. Bob only needs to view the list of service accounts, so he gets the viewer role.
+
 ## Review questions
 
 - Name the four levels of the resource hierarchy, from the bottom up.
@@ -99,3 +112,6 @@ Key concepts:
 - What can a project owner do that a project editor cannot?
 - Why might basic roles be a poor fit for a project with sensitive data?
 - At which levels can custom roles be applied, and which level is excluded?
+- What problem do service accounts solve for a program running in a VM?
+- How is a service account named, and what does it use instead of a password?
+- Why can a service account have IAM policies of its own attached to it?
