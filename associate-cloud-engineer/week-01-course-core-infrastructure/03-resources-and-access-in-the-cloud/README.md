@@ -117,6 +117,44 @@ Key concepts:
 
 - **Google Workspace customers:** this functionality is already available in the Google Admin Console.
 
+## Section 3.5 Interacting with Google Cloud
+
+Video: [Interacting with Google Cloud](https://youtu.be/lkchDTTMrZ8) (3m 40s)
+
+Key concepts:
+
+- **Four ways to access and interact with Google Cloud:**
+
+  | Way | What it is |
+  |---|---|
+  | 1. Google Cloud console | Google Cloud's graphical user interface (GUI), a simple web-based interface |
+  | 2. Google Cloud SDK and Cloud Shell | Command-line tools, installed locally or ready in the browser |
+  | 3. APIs | Let code you write control Google Cloud services |
+  | 4. Google Cloud app | A mobile app for managing resources and watching projects |
+
+- **Google Cloud console:** helps you deploy, scale and diagnose production issues.
+  - Find your resources, check their health, have full management control over them, and set budgets to control how much you spend on them.
+  - Has a search facility to quickly find resources, and lets you connect to instances via SSH in the browser.
+- **Google Cloud SDK:** a set of tools to manage resources and applications hosted on Google Cloud.
+  - Includes the **Google Cloud CLI**, the main command-line interface for Google Cloud products and services.
+  - Includes dedicated tools such as **`bq`**, a command-line tool for BigQuery.
+  - When installed, all the SDK tools are located under the **`bin`** directory.
+- **Cloud Shell:** instant command-line access to cloud resources directly from a browser, with no local setup.
+  - A **Debian-based** environment with a persistent **5 GB home directory**.
+  - Comes pre-authenticated and pre-loaded with the Google Cloud SDK and popular tools, so it is always updated and ready for immediate use.
+- **APIs:** the services that make up Google Cloud offer APIs so your code can control them.
+  - **Google APIs Explorer**, a tool in the console, shows which APIs are available and in which versions. You can try them interactively, even those that require user authentication.
+  - **Cloud Client libraries** and **Google API Client libraries** take a lot of the drudgery out of calling Google Cloud from your code, so you don't start from scratch.
+  - Languages currently covered: Java, Python, PHP, C#, Go, Node.js, Ruby and C++.
+- **Google Cloud app:**
+  - Compute Engine: start, stop and SSH into instances, and see logs from each instance.
+  - Cloud SQL: stop and start instances.
+  - App Engine: administer applications by viewing errors, rolling back deployments and changing traffic splitting.
+  - Billing: up-to-date billing information for your projects, and billing alerts for projects going over budget.
+  - Customizable graphs of key metrics such as CPU usage, network usage, requests per second and server errors.
+  - Alerts and incident management.
+  - Download it at cloud.google.com/app.
+
 ## Review questions
 
 - Name the four levels of the resource hierarchy, from the bottom up.
@@ -139,3 +177,8 @@ Key concepts:
 - What goes wrong when a team uses Gmail accounts and Google Groups and someone leaves?
 - Where do admins manage users and groups with Cloud Identity, and which existing directory systems can they reuse credentials from?
 - What does the premium edition of Cloud Identity add over the free edition?
+- What are the four ways to access and interact with Google Cloud?
+- What does the Google Cloud SDK include, and where are its tools installed?
+- Which operating system is Cloud Shell based on, and how much persistent home directory storage does it have?
+- What does the Google APIs Explorer show, and what do the client libraries save you from?
+- Name three things you can do from the Google Cloud app.
