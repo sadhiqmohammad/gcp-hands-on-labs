@@ -46,6 +46,178 @@ Key concepts:
   - Otherwise, use **Cloud Identity**, Google's identity, access, application and endpoint management platform, to generate one.
   - Once created, anyone in the domain can still create projects and billing accounts, as before.
 
+## Section 3.2 Identity and Access Management (IAM)
+
+Video: [Identity and Access Management (IAM)](https://youtu.be/Di1T4RyO9yg) (4m 22s)
+
+Key concepts:
+
+- **IAM:** lets administrators apply policies that define **who** can do **what** and on **which resources**. It helps restrict who has access to what when an organization node holds lots of folders, projects and resources.
+- **Principal (the "who"):** a Google account, a Google group, a service account, or a Cloud Identity domain. Each principal has its own identifier, usually an email address.
+- **Role (the "can do what"):** a collection of permissions. Granting a role to a principal grants all the permissions the role contains.
+  - Example: managing VM instances in a project needs permissions to create, delete, start, stop and change VMs, so they are grouped into one role that is easier to understand and manage.
+- **Inheritance:** a role granted on an element of the resource hierarchy applies to that element and **all the elements below it**.
+- **Deny rules:** prevent certain principals from using certain permissions, regardless of the roles they are granted.
+  - IAM always checks relevant **deny policies before allow policies**.
+  - Deny policies are inherited through the resource hierarchy, like allow policies.
+- **Three kinds of roles:**
+
+  | Role type | Scope | Examples |
+  |---|---|---|
+  | Basic | Broad. On a project, they affect all resources in that project | Owner, editor, viewer, billing administrator |
+  | Predefined | Sets of roles offered by specific Google Cloud services, which also define where the roles can be applied | Compute Engine `instanceAdmin`, applied to a project, a folder or an entire organization |
+  | Custom | The exact permissions you define | An `instanceOperator` role that can stop and start Compute Engine VMs but not reconfigure them |
+
+- **Basic roles in detail:**
+
+  | Basic role | Can access resources | Can change resources | Extra |
+  |---|---|---|---|
+  | Viewer | Yes | No | |
+  | Editor | Yes | Yes | |
+  | Owner | Yes | Yes | Manages the associated roles and permissions, and sets up billing |
+  | Billing administrator | Not covered | No | Controls billing for a project without being able to change its resources |
+
+  - **Caution:** if several people work on a project with sensitive data, basic roles are probably too broad.
+- **Least privilege:** a model many companies use, where each person gets the minimal amount of privilege needed to do their job. Custom roles support it.
+- **Two details before creating custom roles:**
+  1. You must manage the permissions that define the custom role. Because of this, some organizations prefer predefined roles.
+  2. Custom roles can only be applied at the **project or organization level**, not the folder level.
+
+## Section 3.3 Service accounts
+
+Video: [Service accounts](https://youtu.be/xoo5NfLqePY) (1m 38s)
+
+Key concepts:
+
+- **Service account:** lets you assign specific permissions to a virtual machine, so it can interact with other cloud services without human intervention. No person has to grant access manually each time the program runs.
+  - Example: an application in a VM needs to store data in Cloud Storage, and only that VM should have access, not anyone on the internet. Create a service account to authenticate that VM to Cloud Storage.
+- **Identity:** service accounts are named with an email address, but they use **cryptographic keys** instead of passwords to access resources.
+- **Roles still apply:** if a service account has Compute Engine's Instance Admin role, an application running in a VM with that service account can create, modify and delete other VMs.
+- **A service account is also a resource:** besides being an identity, it can have IAM policies of its own attached, just like any other Google Cloud resource.
+  - Example: Alice needs to manage which Google accounts can act as service accounts, so she gets the editor role on the service account. Bob only needs to view the list of service accounts, so he gets the viewer role.
+
+## Section 3.4 Cloud Identity
+
+Video: [Cloud Identity](https://youtu.be/EZccX9nFaiI) (1m 17s)
+
+Key concepts:
+
+- **The common starting point:** new customers often log in to the Google Cloud console with a Gmail account and use Google Groups to collaborate with teammates in similar roles.
+  - It is easy to start with, but the team's identities are **not centrally managed**.
+  - If someone leaves the organization, there is no easy way to immediately remove their access to the team's cloud resources.
+- **Cloud Identity:** lets organizations define policies and manage their users and groups using the **Google Admin Console**.
+  - Admins can log in and manage Google Cloud resources with the same usernames and passwords they already use in existing **Active Directory or LDAP** systems.
+  - When someone leaves, an administrator can use the Google Admin Console to disable their account and remove them from groups.
+- **Editions:**
+
+  | Edition | What it adds |
+  |---|---|
+  | Free | Not covered in the video |
+  | Premium | Capabilities to manage mobile devices |
+
+- **Google Workspace customers:** this functionality is already available in the Google Admin Console.
+
+## Section 3.5 Interacting with Google Cloud
+
+Video: [Interacting with Google Cloud](https://youtu.be/lkchDTTMrZ8) (3m 40s)
+
+Key concepts:
+
+- **Four ways to access and interact with Google Cloud:**
+
+  | Way | What it is |
+  |---|---|
+  | 1. Google Cloud console | Google Cloud's graphical user interface (GUI), a simple web-based interface |
+  | 2. Google Cloud SDK and Cloud Shell | Command-line tools, installed locally or ready in the browser |
+  | 3. APIs | Let code you write control Google Cloud services |
+  | 4. Google Cloud app | An app for managing resources, billing and monitoring |
+
+- **Google Cloud console:** helps you deploy, scale and diagnose production issues.
+  - Find your resources, check their health, have full management control over them, and set budgets to control how much you spend on them.
+  - Has a search facility to quickly find resources, and lets you connect to instances via SSH in the browser.
+- **Google Cloud SDK:** a set of tools to manage resources and applications hosted on Google Cloud.
+  - Includes the **Google Cloud CLI**, the main command-line interface for Google Cloud products and services.
+  - Includes dedicated tools such as **`bq`**, a command-line tool for BigQuery.
+  - When installed, all the SDK tools are located under the **`bin`** directory.
+- **Cloud Shell:** instant command-line access to cloud resources directly from a browser, with no local setup.
+  - A **Debian-based** environment with a persistent **5 GB home directory**.
+  - Comes pre-authenticated and pre-loaded with the Google Cloud SDK and popular tools, so it is always updated and ready for immediate use.
+- **APIs:** the services that make up Google Cloud offer APIs so your code can control them.
+  - **Google APIs Explorer**, a tool in the console, shows which APIs are available and in which versions. You can try them interactively, even those that require user authentication.
+  - **Cloud Client libraries** and **Google API Client libraries** take a lot of the drudgery out of calling Google Cloud from your code, so you don't start from scratch.
+  - Languages currently covered: Java, Python, PHP, C#, Go, Node.js, Ruby and C++.
+- **Google Cloud app:**
+  - Compute Engine: start, stop and SSH into instances, and see logs from each instance.
+  - Cloud SQL: stop and start instances.
+  - App Engine: administer applications by viewing errors, rolling back deployments and changing traffic splitting.
+  - Billing: up-to-date billing information for your projects, and billing alerts for projects going over budget.
+  - Customizable graphs of key metrics such as CPU usage, network usage, requests per second and server errors.
+  - Alerts and incident management.
+  - Download it at cloud.google.com/app.
+
+## Section 3.6 Lab: Getting Started with Cloud Marketplace
+
+This section is a hands-on lab, not a video. Step-by-step guide: [Lab 3.6: Getting Started with Cloud Marketplace](06-lab-cloud-marketplace/README.md).
+
+What you do:
+
+- Use **Cloud Marketplace** to deploy a LAMP stack (Linux, Apache HTTP Server, MySQL, PHP and phpMyAdmin) on a Compute Engine instance.
+- Enable the **Compute Engine API** and the **Infrastructure Manager API** when the deployment asks.
+- Open the site on the VM's external IP to confirm that Apache is running.
+
+## Section 3.7 Quiz
+
+The module 3 quiz questions. The correct answer is marked ✅. The explanations draw on this module's sections, and say so where the course doesn't cover an option.
+
+### Question 1
+
+Choose the correct completion: Services and APIs are enabled on a per-__________ basis.
+
+- Billing account
+- Organization
+- ✅ **Project**
+- Folder
+
+**Why it's correct:** projects are the basis for enabling and using Google Cloud services, such as managing APIs, enabling billing, adding and removing collaborators, and enabling other Google services (Section 3.1). The lab shows it too: the Marketplace deployment asks you to enable the Compute Engine API and the Infrastructure Manager API in the lab's project (Section 3.6).
+
+**Why the others are wrong:**
+
+- *Billing account:* module 3 doesn't cover billing accounts. Module 2 mentions them only as a level where budgets can be set (Section 2.7), not where services are enabled.
+- *Organization:* the organization node is the top of the hierarchy and holds folders and projects. Policies can be set there and inherited downward, but services are enabled per project (Section 3.1).
+- *Folder:* folders group projects and let you apply shared policies to them. They don't enable services (Section 3.1).
+
+### Question 2
+
+Which of these values is globally unique, permanent, and unchangeable, but can be modified by the customer during creation?
+
+- ✅ **The project ID**
+- The project name
+- The project number
+- The project's billing credit-card number
+
+**Why it's correct:** the project ID is globally unique and immutable after creation (Section 3.1). The quiz feedback adds that it can be changed during creation, which is the "modified by the customer during creation" part of the question.
+
+**Why the others are wrong:**
+
+- *The project name:* you create it, it doesn't need to be unique, and you can change it at any time (Section 3.1).
+- *The project number:* assigned by Google and mainly used internally by Google Cloud to track resources (Section 3.1). The course doesn't say the customer can set it.
+- *The project's billing credit-card number:* not covered in the course, and not a project identifier at all.
+
+### Question 3
+
+Select the list of IAM role types that are ordered from broadest to finest-grained.
+
+- Custom roles, predefined roles, basic roles
+- Predefined roles, custom roles, basic roles
+- ✅ **Basic roles, predefined roles, custom roles**
+
+**Why it's correct:** basic roles (owner, editor, viewer, billing administrator) are quite broad and affect all resources in a project. Predefined roles are sets offered by specific services, such as Compute Engine's `instanceAdmin`, so they are narrower. Custom roles hold exactly the permissions you define, such as an `instanceOperator` that can only stop and start VMs, so they are the finest-grained (Section 3.2).
+
+**Why the others are wrong:**
+
+- *Custom, predefined, basic:* this is the order reversed, from finest to broadest.
+- *Predefined, custom, basic:* basic roles are the broadest, so they can't come last.
+
 ## Review questions
 
 - Name the four levels of the resource hierarchy, from the bottom up.
@@ -56,3 +228,22 @@ Key concepts:
 - Why put shared policies on a folder instead of on each project?
 - Which two special roles at the organization node does the course name, and what does each control?
 - How is an organization node created with and without Google Workspace?
+- What are the four kinds of IAM principal, and how is each one usually identified?
+- Which does IAM check first, deny policies or allow policies?
+- Name the three kinds of IAM role and give an example of each.
+- What can a project owner do that a project editor cannot?
+- Why might basic roles be a poor fit for a project with sensitive data?
+- At which levels can custom roles be applied, and which level is excluded?
+- What problem do service accounts solve for a program running in a VM?
+- How is a service account named, and what does it use instead of a password?
+- Why can a service account have IAM policies of its own attached to it?
+- What goes wrong when a team uses Gmail accounts and Google Groups and someone leaves?
+- Where do admins manage users and groups with Cloud Identity, and which existing directory systems can they reuse credentials from?
+- What does the premium edition of Cloud Identity add over the free edition?
+- What are the four ways to access and interact with Google Cloud?
+- What does the Google Cloud SDK include, and where are its tools installed?
+- Which operating system is Cloud Shell based on, and how much persistent home directory storage does it have?
+- What does the Google APIs Explorer show, and what do the client libraries save you from?
+- Name three things you can do from the Google Cloud app.
+- Which two APIs does the Cloud Marketplace LAMP deployment ask you to enable?
+- Name the five components of the LAMP stack in the lab and the role of each.

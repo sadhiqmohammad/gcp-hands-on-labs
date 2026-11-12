@@ -36,6 +36,12 @@ One heading per module, linked to its notes. Each section title links to its not
 | Section | Video |
 |---|---|
 | 3.1 [Google Cloud resource hierarchy](03-resources-and-access-in-the-cloud/README.md#section-31-google-cloud-resource-hierarchy) | [▶ 5:28](https://youtu.be/ecVv1L_TEo8) |
+| 3.2 [Identity and Access Management (IAM)](03-resources-and-access-in-the-cloud/README.md#section-32-identity-and-access-management-iam) | [▶ 4:22](https://youtu.be/Di1T4RyO9yg) |
+| 3.3 [Service accounts](03-resources-and-access-in-the-cloud/README.md#section-33-service-accounts) | [▶ 1:38](https://youtu.be/xoo5NfLqePY) |
+| 3.4 [Cloud Identity](03-resources-and-access-in-the-cloud/README.md#section-34-cloud-identity) | [▶ 1:17](https://youtu.be/EZccX9nFaiI) |
+| 3.5 [Interacting with Google Cloud](03-resources-and-access-in-the-cloud/README.md#section-35-interacting-with-google-cloud) | [▶ 3:40](https://youtu.be/lkchDTTMrZ8) |
+| 3.6 [Lab: Getting Started with Cloud Marketplace](03-resources-and-access-in-the-cloud/06-lab-cloud-marketplace/README.md) | Lab, no video |
+| 3.7 [Quiz](03-resources-and-access-in-the-cloud/README.md#section-37-quiz) | No video |
 
 Add one row per section video, in course order. Start a new `### Module N` heading and table for each new module.
 
