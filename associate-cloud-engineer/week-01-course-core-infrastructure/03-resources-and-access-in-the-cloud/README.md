@@ -112,7 +112,7 @@ Key concepts:
 
   | Edition | What it adds |
   |---|---|
-  | Free | Core Cloud Identity features |
+  | Free | Not covered in the video |
   | Premium | Capabilities to manage mobile devices |
 
 - **Google Workspace customers:** this functionality is already available in the Google Admin Console.
