@@ -96,6 +96,27 @@ Key concepts:
 - **A service account is also a resource:** besides being an identity, it can have IAM policies of its own attached, just like any other Google Cloud resource.
   - Example: Alice needs to manage which Google accounts can act as service accounts, so she gets the editor role on the service account. Bob only needs to view the list of service accounts, so he gets the viewer role.
 
+## Section 3.4 Cloud Identity
+
+Video: [Cloud Identity](https://youtu.be/EZccX9nFaiI) (1m 17s)
+
+Key concepts:
+
+- **The common starting point:** new customers often log in to the Google Cloud console with a Gmail account and use Google Groups to collaborate with teammates in similar roles.
+  - It is easy to start with, but the team's identities are **not centrally managed**.
+  - If someone leaves the organization, there is no easy way to immediately remove their access to the team's cloud resources.
+- **Cloud Identity:** lets organizations define policies and manage their users and groups using the **Google Admin Console**.
+  - Admins can log in and manage Google Cloud resources with the same usernames and passwords they already use in existing **Active Directory or LDAP** systems.
+  - When someone leaves, an administrator can use the Google Admin Console to disable their account and remove them from groups.
+- **Editions:**
+
+  | Edition | What it adds |
+  |---|---|
+  | Free | Core Cloud Identity features |
+  | Premium | Capabilities to manage mobile devices |
+
+- **Google Workspace customers:** this functionality is already available in the Google Admin Console.
+
 ## Review questions
 
 - Name the four levels of the resource hierarchy, from the bottom up.
@@ -115,3 +136,6 @@ Key concepts:
 - What problem do service accounts solve for a program running in a VM?
 - How is a service account named, and what does it use instead of a password?
 - Why can a service account have IAM policies of its own attached to it?
+- What goes wrong when a team uses Gmail accounts and Google Groups and someone leaves?
+- Where do admins manage users and groups with Cloud Identity, and which existing directory systems can they reuse credentials from?
+- What does the premium edition of Cloud Identity add over the free edition?
