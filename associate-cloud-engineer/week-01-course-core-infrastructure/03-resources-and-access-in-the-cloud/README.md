@@ -130,7 +130,7 @@ Key concepts:
   | 1. Google Cloud console | Google Cloud's graphical user interface (GUI), a simple web-based interface |
   | 2. Google Cloud SDK and Cloud Shell | Command-line tools, installed locally or ready in the browser |
   | 3. APIs | Let code you write control Google Cloud services |
-  | 4. Google Cloud app | A mobile app for managing resources and watching projects |
+  | 4. Google Cloud app | An app for managing resources, billing and monitoring |
 
 - **Google Cloud console:** helps you deploy, scale and diagnose production issues.
   - Find your resources, check their health, have full management control over them, and set budgets to control how much you spend on them.
