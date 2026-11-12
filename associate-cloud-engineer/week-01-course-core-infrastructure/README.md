@@ -43,6 +43,13 @@ One heading per module, linked to its notes. Each section title links to its not
 | 3.6 [Lab: Getting Started with Cloud Marketplace](03-resources-and-access-in-the-cloud/06-lab-cloud-marketplace/README.md) | Lab, no video |
 | 3.7 [Quiz](03-resources-and-access-in-the-cloud/README.md#section-37-quiz) | No video |
 
+### Module 4: [Virtual Machines and Networks in the Cloud](04-virtual-machines-and-networks-in-the-cloud/README.md)
+
+| Section | Video |
+|---|---|
+| 4.1 [Virtual Private Cloud networking](04-virtual-machines-and-networks-in-the-cloud/README.md#section-41-virtual-private-cloud-networking) | [▶ 2:21](https://youtu.be/SFRCZvJN650) |
+| 4.2 [Compute Engine](04-virtual-machines-and-networks-in-the-cloud/README.md#section-42-compute-engine) | [▶ 3:45](https://youtu.be/90pyGSKyPDQ) |
+
 Add one row per section video, in course order. Start a new `### Module N` heading and table for each new module.
 
 ## Module folder layout
