@@ -46,6 +46,43 @@ Key concepts:
   - Otherwise, use **Cloud Identity**, Google's identity, access, application and endpoint management platform, to generate one.
   - Once created, anyone in the domain can still create projects and billing accounts, as before.
 
+## Section 3.2 Identity and Access Management (IAM)
+
+Video: [Identity and Access Management (IAM)](https://youtu.be/Di1T4RyO9yg) (4m 22s)
+
+Key concepts:
+
+- **IAM:** lets administrators apply policies that define **who** can do **what** and on **which resources**. It helps restrict who has access to what when an organization node holds lots of folders, projects and resources.
+- **Principal (the "who"):** a Google account, a Google group, a service account, or a Cloud Identity domain. Each principal has its own identifier, usually an email address.
+- **Role (the "can do what"):** a collection of permissions. Granting a role to a principal grants all the permissions the role contains.
+  - Example: managing VM instances in a project needs permissions to create, delete, start, stop and change VMs, so they are grouped into one role that is easier to understand and manage.
+- **Inheritance:** a role granted on an element of the resource hierarchy applies to that element and **all the elements below it**.
+- **Deny rules:** prevent certain principals from using certain permissions, regardless of the roles they are granted.
+  - IAM always checks relevant **deny policies before allow policies**.
+  - Deny policies are inherited through the resource hierarchy, like allow policies.
+- **Three kinds of roles:**
+
+  | Role type | Scope | Examples |
+  |---|---|---|
+  | Basic | Broad. On a project, they affect all resources in that project | Owner, editor, viewer, billing administrator |
+  | Predefined | Sets of roles offered by specific Google Cloud services, which also define where the roles can be applied | Compute Engine `instanceAdmin`, applied to a project, a folder or an entire organization |
+  | Custom | The exact permissions you define | An `instanceOperator` role that can stop and start Compute Engine VMs but not reconfigure them |
+
+- **Basic roles in detail:**
+
+  | Basic role | Can access resources | Can change resources | Extra |
+  |---|---|---|---|
+  | Viewer | Yes | No | |
+  | Editor | Yes | Yes | |
+  | Owner | Yes | Yes | Manages the associated roles and permissions, and sets up billing |
+  | Billing administrator | Not covered | No | Controls billing for a project without being able to change its resources |
+
+  - **Caution:** if several people work on a project with sensitive data, basic roles are probably too broad.
+- **Least privilege:** a model many companies use, where each person gets the minimal amount of privilege needed to do their job. Custom roles support it.
+- **Two details before creating custom roles:**
+  1. You must manage the permissions that define the custom role. Because of this, some organizations prefer predefined roles.
+  2. Custom roles can only be applied at the **project or organization level**, not the folder level.
+
 ## Review questions
 
 - Name the four levels of the resource hierarchy, from the bottom up.
@@ -56,3 +93,9 @@ Key concepts:
 - Why put shared policies on a folder instead of on each project?
 - Which two special roles at the organization node does the course name, and what does each control?
 - How is an organization node created with and without Google Workspace?
+- What are the four kinds of IAM principal, and how is each one usually identified?
+- Which does IAM check first, deny policies or allow policies?
+- Name the three kinds of IAM role and give an example of each.
+- What can a project owner do that a project editor cannot?
+- Why might basic roles be a poor fit for a project with sensitive data?
+- At which levels can custom roles be applied, and which level is excluded?
