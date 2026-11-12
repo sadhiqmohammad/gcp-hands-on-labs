@@ -4,7 +4,7 @@ Deploy a LAMP stack on a Compute Engine instance in one click from Cloud Marketp
 
 | Lab ID | Direct link |
 |---|---|
-| TBD | TBD |
+| None | [Open in Google Skills](https://www.skills.google/course_templates/60/labs/689558) |
 
 > **ACE exam note:** Cloud Marketplace deploys a ready-made solution, here a VM with its software already installed, without building it by hand. Know that a deployment needs the Compute Engine API and the Infrastructure Manager API, that the result is an ordinary Compute Engine VM, and how to reach it on its external IP.
 
