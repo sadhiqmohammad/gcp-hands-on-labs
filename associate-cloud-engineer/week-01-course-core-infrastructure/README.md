@@ -49,6 +49,12 @@ One heading per module, linked to its notes. Each section title links to its not
 |---|---|
 | 4.1 [Virtual Private Cloud networking](04-virtual-machines-and-networks-in-the-cloud/README.md#section-41-virtual-private-cloud-networking) | [▶ 2:21](https://youtu.be/SFRCZvJN650) |
 | 4.2 [Compute Engine](04-virtual-machines-and-networks-in-the-cloud/README.md#section-42-compute-engine) | [▶ 3:45](https://youtu.be/90pyGSKyPDQ) |
+| 4.3 [Scaling virtual machines](04-virtual-machines-and-networks-in-the-cloud/README.md#section-43-scaling-virtual-machines) | [▶ 1:13](https://youtu.be/YQK8u563me4) |
+| 4.4 [Important VPC compatibilities](04-virtual-machines-and-networks-in-the-cloud/README.md#section-44-important-vpc-compatibilities) | [▶ 1:31](https://youtu.be/UtNlJbm8s2Q) |
+| 4.5 [Cloud Load Balancing](04-virtual-machines-and-networks-in-the-cloud/README.md#section-45-cloud-load-balancing) | [▶ 2:56](https://youtu.be/HWJQ3LNagXc) |
+| 4.6 [Cloud DNS and Cloud CDN](04-virtual-machines-and-networks-in-the-cloud/README.md#section-46-cloud-dns-and-cloud-cdn) | [▶ 1:45](https://youtu.be/TYB1cur47mk) |
+| 4.7 [Connecting networks to Google VPC](04-virtual-machines-and-networks-in-the-cloud/README.md#section-47-connecting-networks-to-google-vpc) | [▶ 5:47](https://youtu.be/g24UStCvpQg) |
+| 4.8 [Lab: Get Started with VPC Networking and Compute Engine](04-virtual-machines-and-networks-in-the-cloud/08-lab-vpc-networking-compute-engine/README.md) | Lab, no video |
 
 Add one row per section video, in course order. Start a new `### Module N` heading and table for each new module.
 
