@@ -47,7 +47,9 @@ yt-dlp -q --no-warnings --skip-download --write-subs --write-auto-subs \
   --sub-langs en --sub-format vtt -o "<scratchpad>/yt/%(id)s" <video-url>
 ```
 
-Then read the `.vtt` text with the timestamps and tags stripped. Don't use Apify or any other paid service for transcripts: it uses Sadhiq's paid credits. If `yt-dlp` can't get captions, ask Sadhiq before trying anything else. The template is in `associate-cloud-engineer/week-01-course-core-infrastructure/README.md`. When adding a section or module, update the course index: a new row in that module's table, or a new module heading and table.
+Then read the `.vtt` text with the timestamps and tags stripped. Don't use Apify or any other paid service for transcripts: it uses Sadhiq's paid credits. If `yt-dlp` can't get captions, ask Sadhiq before trying anything else. The transcript Google Skills shows beside the video, pasted by Sadhiq, is also an official source.
+
+For step screenshots in a demo section, download the video with `yt-dlp` (720p) into the scratchpad, grab frames with `ffmpeg`, check each one, and commit only the chosen frames as JPGs in the module's `images/` folder, named `NN-<step>.jpg`. Never commit the video. The template is in `associate-cloud-engineer/week-01-course-core-infrastructure/README.md`. When adding a section or module, update the course index: a new row in that module's table, or a new module heading and table.
 
 ## Git
 
