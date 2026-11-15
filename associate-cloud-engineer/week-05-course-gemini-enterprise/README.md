@@ -17,3 +17,9 @@ One heading per module, linked to its notes. Each section title links to its not
 | Section | Video |
 |---|---|
 | 1.1 [Create Your First Gemini Enterprise Application](01-create-your-first-gemini-enterprise-application/README.md#section-11-create-your-first-gemini-enterprise-application) | [▶ 6:12](https://youtu.be/_Ol1uUa6QQ8) |
+
+### Module 2: [Assessment](02-assessment/README.md)
+
+| Section | Video |
+|---|---|
+| 2.1 [Assessment](02-assessment/README.md#section-21-assessment) | No video |
