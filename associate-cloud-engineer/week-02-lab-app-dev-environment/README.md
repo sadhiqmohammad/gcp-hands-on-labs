@@ -9,6 +9,7 @@ Skill badge [course 637](https://www.skills.google/course_templates/637), "Set U
 | # | Lab | Lab ID | What you build |
 |---|---|---|---|
 | 1 | [Manage Cloud Storage with the Google Cloud Console](01-cloud-storage-console/) | [GSP073](https://www.skills.google/course_templates/637/labs/592541) | A public bucket with an uploaded image, plus folders created and deleted |
+| 2 | [Manage Cloud Storage with the Google Cloud CLI](02-cloud-storage-cli/) | [GSP074](https://www.skills.google/course_templates/637/labs/592542) | The same bucket tasks from Cloud Shell, with one object made public and private again by ACL |
 
 ## Variables used in every module
 
@@ -29,4 +30,6 @@ More is added as each lab is completed.
 - **Storage classes:** Standard, Nearline (30-day minimum), Coldline (90-day minimum), Archive (365-day minimum). The class is set per bucket as a default and can be changed per object.
 - **Access control:** uniform bucket-level access uses IAM only. Fine-grained also allows per-object ACLs.
 - **Public objects:** grant `allUsers` the `roles/storage.objectViewer` role. Public access prevention blocks this when enforced.
+- **One public object** (fine-grained only): `gcloud storage objects update gs://BUCKET/OBJ --add-acl-grant=entity=allUsers,role=READER`, and `--remove-acl-grant=allUsers` to undo it.
+- **CLI verbs:** `gcloud storage buckets create`, `cp` (upload, download, or copy between paths), `ls` (`-l` for size and date, `-r` for everything), `rm` (`-r` for a folder).
 - **Folders** are name prefixes in a flat namespace. Deleting a folder deletes every object under that prefix.
