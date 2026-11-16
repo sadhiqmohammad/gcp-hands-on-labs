@@ -8,6 +8,7 @@ Skill badge [course 637](https://www.skills.google/course_templates/637), "Set U
 
 | # | Lab | Lab ID | What you build |
 |---|---|---|---|
+| 1 | [Manage Cloud Storage with the Google Cloud Console](01-cloud-storage-console/) | [GSP073](https://www.skills.google/course_templates/637/labs/592541) | A public bucket with an uploaded image, plus folders created and deleted |
 
 ## Variables used in every module
 
@@ -22,4 +23,10 @@ gcloud config set compute/zone $ZONE
 
 ## Quick recap for the exam
 
-Filled in as each lab is completed.
+More is added as each lab is completed.
+
+- **Bucket names** are global, unique across all of Google Cloud, lowercase, with no spaces.
+- **Storage classes:** Standard, Nearline (30-day minimum), Coldline (90-day minimum), Archive (365-day minimum). The class is set per bucket as a default and can be changed per object.
+- **Access control:** uniform bucket-level access uses IAM only. Fine-grained also allows per-object ACLs.
+- **Public objects:** grant `allUsers` the `roles/storage.objectViewer` role. Public access prevention blocks this when enforced.
+- **Folders** are name prefixes in a flat namespace. Deleting a folder deletes every object under that prefix.
