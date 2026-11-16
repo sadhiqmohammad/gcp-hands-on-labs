@@ -8,7 +8,10 @@ Two lab users: Username 1 (Owner) removes Username 2's project Viewer role, then
 
 > **ACE exam note:** know the four basic roles (Browser, Viewer, Editor, Owner) and that only Owner can manage IAM and billing. A predefined role such as Storage Object Viewer gives access to one service without the project-wide Viewer role. IAM changes can take up to 80 seconds to apply.
 
-The lab gives you **two** sets of credentials. Sign in to each in its own incognito window, so you have one console tab per user. To check which user a tab uses, hover over the avatar. If a tab shows the wrong user, sign out and use **Open Google Console** again.
+The lab gives you **two** sets of credentials, and each needs its own browser session. The lab says to use a second incognito window, but in Chrome every incognito window shares one session, so the second one is already signed in as Username 1. Instead:
+
+- **Username 1:** a Chrome incognito window.
+- **Username 2:** a Chrome **Guest** window (profile icon at the top right > **Guest**) or a private window in another browser, such as Safari (File > New Private Window). Copy the **Open Google Console** link from the lab panel and paste it there. To check which user a tab uses, hover over the avatar. If a tab shows the wrong user, sign out and use **Open Google Console** again.
 
 You need any small `.txt` or `.html` file on your computer for Task 2.
 
@@ -108,6 +111,7 @@ gs://[YOUR_BUCKET_NAME]/sample.txt
 
 | Problem | Fix |
 |---|---|
+| Second incognito window is already signed in as Username 1, so Username 2 can't sign in | Chrome incognito windows share one session. Sign in Username 2 from a Chrome Guest window or another browser's private window. |
 | Permission error creating the bucket | The tab is signed in as Username 2. Sign out, then sign in again with Username 1. |
 | Username 2 can still see buckets after Task 3 | IAM changes take up to 80 seconds. Wait 2 minutes and refresh. |
 | 403 or "IAM policy update failed" when saving in Task 4 | New lab users take a few minutes to propagate. Wait and save again. |
