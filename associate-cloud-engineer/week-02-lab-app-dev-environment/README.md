@@ -2,7 +2,7 @@
 
 Skill badge [course 637](https://www.skills.google/course_templates/637), "Set Up an App Dev Environment on Google Cloud". Required for week 2. It covers Cloud Storage, Identity and Access Management (IAM), Cloud Run functions and Pub/Sub, and ends with a challenge lab.
 
-> **Note on the lab list:** the lab list is behind the Google Skills sign-in, so each lab is added here as I work through it, in course order.
+> **Note on the lab list:** each lab is added here as I work through it, in course order. Guides follow the lab instructions on Google Skills.
 
 ## Modules
 
