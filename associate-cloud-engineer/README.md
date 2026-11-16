@@ -14,7 +14,7 @@ Type is **Lab** (skill badge made of labs, each with a Lab ID) or **Course** (ma
 | 3 | Lab | Build a Secure Google Cloud Network | — | Not started |
 | 4 | Lab | Cloud Security Fundamentals | — | Not started |
 | 5 | Lab | Develop Your Google Cloud Network | — | Not started |
-| 5 | Lab | Create Your First Gemini Enterprise Application (required) | — | Not started |
+| 5 | Course | Create Your First Gemini Enterprise Application (required, skill badge) | [week-05-course-gemini-enterprise](week-05-course-gemini-enterprise/) (module notes + lab guides) | In progress |
 | 6 | Lab | Build Infrastructure with Terraform | — | Not started |
 
 ## Side labs
