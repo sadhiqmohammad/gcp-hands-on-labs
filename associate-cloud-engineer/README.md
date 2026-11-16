@@ -10,7 +10,7 @@ Type is **Lab** (skill badge made of labs, each with a Lab ID) or **Course** (ma
 |---|---|---|---|---|
 | 1 | Lab | Implement Load Balancing on Compute Engine | [week-01-lab-load-balancing](week-01-lab-load-balancing/) (5 labs + challenge) | Completed 2026-11-06 |
 | 1 | Course | Google Cloud Fundamentals: Core Infrastructure (not one of the 7 skill badges) | [week-01-course-core-infrastructure](week-01-course-core-infrastructure/) (module notes) | Not started |
-| 2 | Lab | Set Up an App Dev Environment on Google Cloud | — | Not started |
+| 2 | Lab | Set Up an App Dev Environment on Google Cloud (required) | [week-02-lab-app-dev-environment](week-02-lab-app-dev-environment/) (labs added as completed) | In progress |
 | 3 | Lab | Build a Secure Google Cloud Network | — | Not started |
 | 4 | Lab | Cloud Security Fundamentals | — | Not started |
 | 5 | Lab | Develop Your Google Cloud Network | — | Not started |
