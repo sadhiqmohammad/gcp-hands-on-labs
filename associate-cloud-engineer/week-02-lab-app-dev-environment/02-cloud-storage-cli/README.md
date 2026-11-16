@@ -123,4 +123,5 @@ Only the top-level `ada.jpg` is removed. The copy in `image-folder/` is still th
 | Task 7 fails with "uniform bucket-level access is enabled" | Object ACLs need fine-grained access. Turn it off with `gcloud storage buckets update gs://$BUCKET --no-uniform-bucket-level-access`, then run Task 7 again. |
 | Task 7 fails or the URL returns 403 because of public access prevention | Check the bucket's **Configuration** tab. If public access prevention is enforced, run `gcloud storage buckets update gs://$BUCKET --no-public-access-prevention`. |
 | Check my progress fails on Task 4 | The object must be at `image-folder/ada.jpg`. Run `gcloud storage ls -r gs://$BUCKET` to check the path. |
+| Task 8: `ACL entities marked for removal did not match existing grants: ['entity=allUsers']` | `--remove-acl-grant` takes only the entity name, not the `entity=...,role=...` form that `--add-acl-grant` uses. Run `--remove-acl-grant=allUsers`. |
 | Public link still shows after Task 8 | Refresh the console. |
